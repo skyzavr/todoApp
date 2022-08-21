@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.header {
+  margin: auto 20px;
+  height: 80px;
+}
+
+.header .header__wrapepr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__wrapepr .header__logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.header .header__wrapepr .header__logo img {
+  width: 48px;
+}
+
+.header .header__wrapepr .header__logo .greetings {
+  margin-left: 20px;
+  color: #4686da;
+  font-size: 30px;
+}
+
+.header .header__wrapepr .header__controls {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.header .header__wrapepr .header__controls .lang {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+.header .header__wrapepr .header__controls .lang select {
+  border: 0px solid black;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  max-width: 150px;
+  width: 100%;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  /* display: inline-flex; */
+  font-size: 24px;
+}
+
+.header .header__wrapepr .header__controls .lang option {
+  color: #262f49;
+}
+
+.header .header__wrapepr .header__controls .lang:focus {
+  outline: none;
+}
+
+.header .header__wrapepr .header__controls .themeSwitch .btnSwitch {
+  background-color: #8ab2ff;
+  color: #262f49;
+  border-radius: 15px;
+  font-size: 24px;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  border: 0;
+}
+
+.header .header__wrapepr .header__controls .themeSwitch .btnSwitch:hover {
+  -webkit-box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+          box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+  cursor: pointer;
+}
+
+.line {
+  height: 3px;
+  background: #8ab2ff;
+  z-index: 1000000000000000000;
+  width: 100%;
+}
+
+.side__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.side__wrapper .sideBar {
+  margin-top: 50px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.side__wrapper .sideBar .sideBar__list {
+  list-style: none;
+  padding: 0;
+}
+
+.side__wrapper .sideBar .sideBar__list .ul_li {
+  height: 40px;
+  font-size: 24px;
+  margin-top: 20px;
+  padding-left: 40px;
+  -webkit-transition: -webkit-transform 0.45s ease-in-out;
+  transition: -webkit-transform 0.45s ease-in-out;
+  -o-transition: transform 0.45s ease-in-out;
+  transition: transform 0.45s ease-in-out;
+  transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
+}
+
+.side__wrapper .sideBar .sideBar__list .ul_li a {
+  color: #c8cfdc;
+  text-decoration: none;
+}
+
+.side__wrapper .sideBar .sideBar__list .ul_li:hover {
+  -webkit-transform: translate3d(20px, 0px, 0px);
+          transform: translate3d(20px, 0px, 0px);
+}
+
+.side__wrapper .sideBar .sideBar__list .ul_li.active a {
+  color: #4686da;
+}
+
+.side__wrapper .vertLine {
+  height: 300px;
+  width: 3px;
+  background: #8ab2ff;
+}
+
+.side__wrapper .main {
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.side__wrapper .main .main__wrapper .todo__input .input__form {
+  border: #86afff 3px solid;
+  border-radius: 15px;
+  width: 500px;
+  height: 55px;
+  background-color: #fff;
+  color: #c6d9ff;
+  font-size: 20px;
+  padding-left: 20px;
+  margin-right: 10px;
+}
+
+.side__wrapper .main .main__wrapper .todo__input .input__btn {
+  border-radius: 15px;
+  color: #1d50b5;
+  background-color: #8ab2ff;
+  width: 110px;
+  height: 60px;
+  border: 0;
+  font-size: 24px;
+}
+
+.side__wrapper .main .main__wrapper .todo__input .input__btn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+          box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+}
+
+.side__wrapper .main .todo__list .todo__ul {
+  padding-left: 0;
+}
+
+.side__wrapper .main .todo__list .todo__ul .list__el {
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+  max-width: 700px;
+}
+
+.side__wrapper .main .todo__list .todo__ul .list__el .list__checkbox {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-right: 5px;
+  background: #fff;
+}
+
+.side__wrapper .main .todo__list .todo__ul .list__el .list__checkbox:checked {
+  background-color: #262f49;
+}
+
+.side__wrapper .main .todo__list .todo__ul .list__el .work {
+  border: 2px solid #d7453a;
+}
+
+.side__wrapper .main .todo__list .todo__ul .list__el .personal {
+  border: 2px solid #5552b9;
+}
+
+.side__wrapper .main .todo__list .todo__ul .list__el .gross {
+  border: 2px solid #73bedf;
+}
+
+.side__wrapper .main .todo__list .todo__ul .list__el .list__bin img {
+  margin-left: 20px;
+  width: 14px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.side__wrapper .main .todo__list .todo__ul .list__el:hover {
+  cursor: pointer;
+  background-color: #eaeaea;
+}
+
+.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 100;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.message {
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 4px solid #d7453a;
+  max-width: 400px;
+  padding: 50px 100px;
+  z-index: 1000;
+}
+
+.message .closeLine {
+  text-align: center;
+}
+
+.message .closeLine .closePopUpBtn {
+  color: #1d50b5;
+  background-color: #8ab2ff;
+  font-size: 24px;
+  padding: 12px 28px;
+  border-radius: 15px;
+  border: 0px;
+}
+
+.message .closeLine .closePopUpBtn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+          box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+}
+
+.message .message__text .message__msg {
+  font-size: 24px;
+  color: #262f49;
+  text-align: center;
+}
+
+.hidden_PP {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hideBin {
+  display: none;
+}
+
+.checked {
+  text-decoration: line-through;
+}

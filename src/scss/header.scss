@@ -1,0 +1,75 @@
+@import 'colours.scss';
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+.header {
+  margin: auto 20px;
+  // font-size: 30px;
+  height: 80px;
+
+  .header__wrapepr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo {
+      display: inline-flex;
+      img {
+        width: 48px;
+      }
+      .greetings {
+        margin-left: 20px;
+        color: $lHeadTextAct;
+        font-size: 30px;
+      }
+    }
+    .header__controls {
+      display: inline-flex;
+      .lang {
+        display: inline-flex;
+        margin-right: 20px;
+        select {
+          border: 0px solid black;
+          appearance: none;
+          max-width: 150px;
+          width: 100%;
+          color: #333;
+          background-color: #ffffff;
+          background-image: none;
+          /* display: inline-flex; */
+          font-size: 24px;
+        }
+        option {
+          color: $lLiText;
+        }
+      }
+      .lang:focus {
+        outline: none;
+      }
+      .themeSwitch {
+        .btnSwitch {
+          background-color: $lBtnBgrAct;
+          color: $lLiText;
+          border-radius: 15px;
+          font-size: 24px;
+          height: 40px;
+          width: 100px;
+          text-align: center;
+          border: 0;
+        }
+        .btnSwitch:hover {
+          box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.line {
+  height: 3px;
+  background: $lBtnBgrAct;
+  z-index: 1000000000000000000;
+  width: 100%;
+}

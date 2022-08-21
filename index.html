@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="src/img/Logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="src/js/script.js"></script>
+    <title>ToDo App | time to do</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapepr">
+        <div class="header__logo">
+          <img src="src/img/Logo.svg" />
+          <p class="greetings">Hello, Tomas!</p>
+        </div>
+        <div class="header__controls">
+          <div class="lang">
+            <select>
+              <option>Eng</option>
+              <option>Rus</option>
+            </select>
+          </div>
+          <div class="themeSwitch">
+            <input type="button" value="Dark" class="btnSwitch" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="line"></div>
+    <!-- side bar -->
+    <main class="side__wrapper">
+      <div class="sideBar">
+        <ul class="sideBar__list">
+          <li class="ul_li active">
+            <a href="#" data-type="active">Active</a>
+          </li>
+          <li class="ul_li">
+            <a href="#" data-type="complited">Complited</a>
+          </li>
+        </ul>
+      </div>
+      <div class="vertLine"></div>
+      <!-- main content -->
+      <div class="main">
+        <div class="main__wrapper">
+          <div class="todo__input">
+            <input type="text" class="input__form" />
+            <input type="button" value="Add" class="input__btn inactive" />
+          </div>
+        </div>
+
+        <div class="todo__list">
+          <ul class="todo__ul"></ul>
+        </div>
+      </div>
+    </main>
+
+    <div class="message hidden_PP">
+      <div class="message__text">
+        <p class="message__msg">You haven't written anything</p>
+      </div>
+      <div class="closeLine">
+        <input type="button" value="Close" class="closePopUpBtn" />
+      </div>
+    </div>
+    <div class="popUp hidden_PP"></div>
+  </body>
+  <script src="src/js/script.js"></script>
+</html>

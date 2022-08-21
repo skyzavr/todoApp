@@ -1,0 +1,38 @@
+@import 'colours.scss';
+.side__wrapper {
+  display: flex;
+  margin-top: 10px;
+  .sideBar {
+    margin-top: 50px;
+    max-width: 300px;
+    width: 100%;
+    .sideBar__list {
+      list-style: none;
+      padding: 0;
+      .ul_li {
+        height: 40px;
+        font-size: 24px;
+        margin-top: 20px;
+        padding-left: 40px;
+        a {
+          color: $lTextPas;
+          text-decoration: none;
+        }
+        transition: transform 0.45s ease-in-out;
+      }
+      .ul_li:hover {
+        transform: translate3d(20px, 0px, 0px);
+      }
+      .ul_li.active {
+        a {
+          color: $lHeadTextAct;
+        }
+      }
+    }
+  }
+  .vertLine {
+    height: 300px;
+    width: 3px;
+    background: $lBtnBgrAct;
+  }
+}

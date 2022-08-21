@@ -1,0 +1,83 @@
+@import 'colours.scss';
+.side__wrapper {
+  .main {
+    margin-left: 20px;
+    margin-top: 50px;
+    .main__wrapper {
+      .todo__input {
+        .input__form {
+          border: $lInpBorderCol 3px solid;
+          border-radius: 15px;
+          width: 500px;
+          height: 55px;
+          background-color: $bgrCol;
+          color: $lInpColour;
+          font-size: 20px;
+          padding-left: 20px;
+          margin-right: 10px;
+        }
+        .input__btn {
+          border-radius: 15px;
+          color: $lBtnTextAct;
+          background-color: $lBtnBgrAct;
+          width: 110px;
+          height: 60px;
+          border: 0;
+          font-size: 24px;
+        }
+        .input__btn:hover {
+          cursor: pointer;
+          box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+        }
+      }
+    }
+
+    .todo__list {
+      //ul list
+      .todo__ul {
+        padding-left: 0;
+        .list__el {
+          list-style: none;
+          padding: 10px;
+          margin: 10px;
+          max-width: 700px;
+          //   checkbox
+          .list__checkbox {
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            outline: none;
+            vertical-align: middle;
+            cursor: pointer;
+            appearance: none;
+            margin-right: 5px;
+            background: $bgrCol;
+          }
+          .list__checkbox:checked {
+            background-color: $lLiText;
+          }
+          .work {
+            border: 2px solid $workColour;
+          }
+          .personal {
+            border: 2px solid $PersonalColour;
+          }
+          .gross {
+            border: 2px solid $GrossColour;
+          }
+          //bin
+          .list__bin img {
+            margin-left: 20px;
+            width: 14px;
+            height: 16px;
+            vertical-align: middle;
+          }
+        }
+        .list__el:hover {
+          cursor: pointer;
+          background-color: #eaeaea;
+        }
+      }
+    }
+  }
+}
