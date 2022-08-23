@@ -10,6 +10,13 @@ export const state = {
   },
   completeTasks: [],
   tasks: [],
+  exmList: [
+    'morning running',
+    'bye milk',
+    'clean car',
+    'have a bike trip',
+    'finish task',
+  ],
   dataType: 'active',
 };
 export function initTasks() {

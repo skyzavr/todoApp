@@ -14,8 +14,7 @@
   position: relative;
   top: 50%;
   margin: 0 auto;
-  background-color: $bgrCol;
-  border: 4px solid $workColour;
+  background-color: #d7d7dd;
   max-width: 400px;
   padding: 50px 100px;
   z-index: 1000;
@@ -23,8 +22,8 @@
     text-align: center;
     .closePopUpBtn {
       color: $lBtnTextAct;
-      background-color: $lBtnBgrAct;
-      font-size: 24px;
+      background-color: #e0e0e6;
+      font-size: 16px;
       padding: 12px 28px;
       border-radius: 15px;
       border: 0px;
@@ -35,6 +34,7 @@
     }
   }
   .message__text {
+    margin-bottom: 20px;
     .message__msg {
       font-size: 24px;
       color: $lLiText;

@@ -22,11 +22,11 @@ body.dark {
 
         .themeSwitch {
           .btnSwitch {
-            background-color: $dBtnBgrAct;
-            color: $dLightSwitchCol;
+            background-color: #131826;
+            color: #fff;
           }
-          .btnSwitch :hover {
-            box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+          .btnSwitch:hover {
+            box-shadow: 0px 5px 53px -25px rgba(0, 188, 255, 0.2) inset;
           }
         }
       }
@@ -41,17 +41,18 @@ body.dark {
     .main {
       .main__wrapper {
         .todo__input {
-          .input__form {
-            border: $dInpBorderCol 3px solid;
-            background-color: $bgrCol;
-            color: $dInpColour;
-          }
+          .input__form,
           .input__btn {
-            color: $dBtnTextAct;
-            background-color: $dBtnBgrAct;
+            border: 0;
+            background-color: #131826;
+            color: #fff;
+          }
+          input[type='text' i]::placeholder {
+            /* Most modern browsers support this now. */
+            color: $dBtnBgr;
           }
           .input__btn:hover {
-            box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 5px 53px -25px rgba(0, 188, 255, 0.2) inset;
           }
         }
       }
@@ -61,20 +62,21 @@ body.dark {
         .todo__ul {
           .list__el {
             color: $dBtnBgrAct;
+            background-color: #131826;
             //   checkbox
 
             .list__checkbox:checked {
               background-color: $bgrCol;
             }
-            .work {
-              border: 2px solid $workColour;
-            }
-            .personal {
-              border: 2px solid $PersonalColour;
-            }
-            .gross {
-              border: 2px solid $GrossColour;
-            }
+            // .work {
+            //   border: 2px solid $workColour;
+            // }
+            // .personal {
+            //   border: 2px solid $PersonalColour;
+            // }
+            // .gross {
+            //   border: 2px solid $GrossColour;
+            // }
             //bin
             .list__bin {
               .bin {
@@ -82,8 +84,8 @@ body.dark {
               }
             }
           }
-          .list__el :hover {
-            background-color: #eaeaea;
+          .list__el:hover {
+            background-color: $dInpColour;
           }
         }
       }
@@ -95,12 +97,11 @@ body.dark {
     background-color: rgba(0, 0, 0, 0.5);
   }
   .message {
-    background-color: $bgrCol;
-    border: 4px solid $workColour;
+    background-color: #252e48;
     .closeLine {
       .closePopUpBtn {
-        color: $dBtnTextAct;
-        background-color: $dBtnBgrAct;
+        color: #fff;
+        background-color: #131826;
       }
       .closePopUpBtn:hover {
         box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
@@ -128,9 +129,6 @@ body.dark {
           }
         }
       }
-    }
-    .vertLine {
-      background: $dBtnBgrAct;
     }
   }
 }
