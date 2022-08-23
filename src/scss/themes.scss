@@ -1,0 +1,136 @@
+body.dark {
+  // header.scss
+  background-color: $dbgrCol;
+  .header {
+    .header__wrapepr {
+      .header__logo {
+        .greetings {
+          color: $dHeadTextAct;
+        }
+      }
+      .header__controls {
+        .lang {
+          select {
+            border: 0px solid $dInpBorderCol;
+            color: $dBtnBgrAct;
+            background-color: $dbgrCol;
+          }
+          option {
+            color: $dLiText;
+          }
+        }
+
+        .themeSwitch {
+          .btnSwitch {
+            background-color: $dBtnBgrAct;
+            color: $dLightSwitchCol;
+          }
+          .btnSwitch :hover {
+            box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+          }
+        }
+      }
+    }
+  }
+  .line {
+    background: $dBtnBgrAct;
+  }
+  // mainContent.scss
+
+  .side__wrapper {
+    .main {
+      .main__wrapper {
+        .todo__input {
+          .input__form {
+            border: $dInpBorderCol 3px solid;
+            background-color: $bgrCol;
+            color: $dInpColour;
+          }
+          .input__btn {
+            color: $dBtnTextAct;
+            background-color: $dBtnBgrAct;
+          }
+          .input__btn:hover {
+            box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+          }
+        }
+      }
+
+      .todo__list {
+        //ul list
+        .todo__ul {
+          .list__el {
+            color: $dBtnBgrAct;
+            //   checkbox
+
+            .list__checkbox:checked {
+              background-color: $bgrCol;
+            }
+            .work {
+              border: 2px solid $workColour;
+            }
+            .personal {
+              border: 2px solid $PersonalColour;
+            }
+            .gross {
+              border: 2px solid $GrossColour;
+            }
+            //bin
+            .list__bin {
+              .bin {
+                filter: invert(1);
+              }
+            }
+          }
+          .list__el :hover {
+            background-color: #eaeaea;
+          }
+        }
+      }
+    }
+  }
+
+  // popUp.scss
+  .popUp {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .message {
+    background-color: $bgrCol;
+    border: 4px solid $workColour;
+    .closeLine {
+      .closePopUpBtn {
+        color: $dBtnTextAct;
+        background-color: $dBtnBgrAct;
+      }
+      .closePopUpBtn:hover {
+        box-shadow: 4px 4px 8px -1px rgba(34, 60, 80, 0.2);
+      }
+    }
+    .message__text {
+      .message__msg {
+        color: $dLiText;
+      }
+    }
+  }
+
+  // sideBar.scss
+  .side__wrapper {
+    .sideBar {
+      .sideBar__list {
+        .ul_li {
+          a {
+            color: $dTextPas;
+          }
+        }
+        .ul_li.active {
+          a {
+            color: $dHeadTextAct;
+          }
+        }
+      }
+    }
+    .vertLine {
+      background: $dBtnBgrAct;
+    }
+  }
+}

@@ -10,8 +10,7 @@ export const state = {
   },
   completeTasks: [],
   tasks: [],
-  theme: 'light',
-  dataType: '',
+  dataType: 'active',
 };
 export function initTasks() {
   //TODO if we have something in local storage, we'll put it in an array

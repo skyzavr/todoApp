@@ -1,8 +1,8 @@
-export function renderToDoList(listOfTasks, Ul, theme, dataType) {
-  const todoUl = document.querySelector('.todo__ul');
+export function renderToDoList(listOfTasks, Ul, dataType, theme = '') {
   //TODO choosing a category (work, personal, gross)
   listOfTasks.forEach((el) => {
-    const activeType = `<li class='list__el'><input type="checkbox"class="list__checkbox work">${el} <span class='list__bin'><img src="src/img/bin_${theme}Theme.svg" class="bin" alt="bin"><span/>
+    //fix image white in dark theme
+    const activeType = `<li class='list__el'><input type="checkbox"class="list__checkbox work">${el} <span class='list__bin'><img src="src/img/bin_Theme.svg" class="bin ${theme}" alt="bin"><span/>
     </li>`;
     const complType = `<li class='list__el checked'>${el} 
     </li>`;
@@ -20,7 +20,7 @@ function showError() {
     [popUp, msgWind].forEach((el) => el.classList.add('hidden_PP'));
   });
 }
-export function addValue(el, task, theme, dataType) {
+export function addValue(el, task, dataType) {
   const inputText = document.querySelector('.input__form');
   const inputValue = inputText.value;
   if (inputText.value.trim() === '') {
@@ -28,7 +28,7 @@ export function addValue(el, task, theme, dataType) {
     inputText.value = '';
     return;
   }
-  renderToDoList([inputValue], el, theme, dataType);
+  renderToDoList([inputValue], el, dataType);
   task.push(`${inputValue}`);
   inputText.value = '';
 }
@@ -57,15 +57,11 @@ function completeTask(e, complTask, task) {
 }
 export function statusChanging(el, task, complTask) {
   el.addEventListener('click', function (e) {
-    if (e.target.className === 'bin') {
+    if (e.target.className.includes('bin')) {
       removeElement(e, task);
     }
     if (e.target.className.includes('list__checkbox')) {
       completeTask(e, complTask, task);
     }
-    //TODO editable element
-    // if (e.target.className === 'list__el') {
-    //   console.log('list__eeeel');
-    // }
   });
 }

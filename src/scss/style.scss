@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 @import 'colours.scss', 'header.scss', 'sideBar.scss', 'mainContent.scss',
-  'popUp.scss';
+  'popUp.scss', 'themes.scss';
 
 .hideBin {
   display: none;
 }
 .checked {
   text-decoration: line-through;
+}
+.BinDark {
+  filter: invert(1);
+}
+
+.bin {
+  filter: invert(0);
 }
