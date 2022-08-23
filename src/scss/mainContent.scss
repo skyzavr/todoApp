@@ -5,25 +5,29 @@
     margin-top: 50px;
     .main__wrapper {
       .todo__input {
+        margin-bottom: 30px;
         .input__form {
-          border: $lInpBorderCol 3px solid;
+          border: 0;
           border-radius: 15px;
           width: 500px;
-          height: 55px;
-          background-color: $bgrCol;
-          color: $lInpColour;
-          font-size: 20px;
+          height: 40px;
+          background-color: #d7d7dd;
+          color: $lBtnTextAct;
+          font-size: 16px;
           padding-left: 20px;
           margin-right: 10px;
+        }
+        .input__form:focus {
+          outline: none;
         }
         .input__btn {
           border-radius: 15px;
           color: $lBtnTextAct;
-          background-color: $lBtnBgrAct;
+          background-color: #d7d7dd;
           width: 110px;
-          height: 60px;
+          height: 40px;
           border: 0;
-          font-size: 24px;
+          font-size: 20px;
         }
         .input__btn:hover {
           cursor: pointer;
@@ -37,45 +41,51 @@
       .todo__ul {
         padding-left: 0;
         .list__el {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          background-color: $dBtnBgrAct;
           list-style: none;
           padding: 10px;
           margin: 10px;
           max-width: 700px;
+          border-radius: 13px;
           //   checkbox
           .list__checkbox {
-            border-radius: 50%;
+            border-radius: 6px;
             width: 20px;
             height: 20px;
             outline: none;
             vertical-align: middle;
             cursor: pointer;
             appearance: none;
-            margin-right: 5px;
-            background: 0;
+            margin-right: 10px;
+            background: #eaebee;
           }
           .list__checkbox:checked {
             background-color: $lLiText;
           }
-          .work {
-            border: 2px solid $workColour;
-          }
-          .personal {
-            border: 2px solid $PersonalColour;
-          }
-          .gross {
-            border: 2px solid $GrossColour;
-          }
+          //! datatype
+          // .work {
+          //   border: 2px solid $workColour;
+          // }
+          // .personal {
+          //   border: 2px solid $PersonalColour;
+          // }
+          // .gross {
+          //   border: 2px solid $GrossColour;
+          // }
           //bin
           .list__bin img {
-            margin-left: 20px;
             width: 14px;
             height: 16px;
             vertical-align: middle;
+            margin-right: 10px;
           }
         }
         .list__el:hover {
           cursor: pointer;
-          background-color: #eaeaea;
+          background-color: #e0e0e6;
         }
       }
     }

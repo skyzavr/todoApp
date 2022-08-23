@@ -1,8 +1,7 @@
 export function renderToDoList(listOfTasks, Ul, dataType, theme = '') {
   //TODO choosing a category (work, personal, gross)
   listOfTasks.forEach((el) => {
-    //fix image white in dark theme
-    const activeType = `<li class='list__el'><input type="checkbox"class="list__checkbox work">${el} <span class='list__bin'><img src="src/img/bin_Theme.svg" class="bin ${theme}" alt="bin"><span/>
+    const activeType = `<li class='list__el'><div><input type="checkbox"class="list__checkbox work">${el} </div><span class='list__bin'><img src="src/img/bin_Theme.svg" class="bin ${theme}" alt="bin"><span/>
     </li>`;
     const complType = `<li class='list__el checked'>${el} 
     </li>`;
@@ -10,6 +9,9 @@ export function renderToDoList(listOfTasks, Ul, dataType, theme = '') {
 
     Ul.insertAdjacentHTML('afterbegin', li);
   });
+}
+export function switchInput(input, classInp) {
+  return input.classList.toggle(`${classInp}`);
 }
 function showError() {
   const btn = document.querySelector('.closePopUpBtn');
@@ -42,9 +44,7 @@ function removeElement(e, task) {
 }
 function completeTask(e, complTask, task) {
   const el = e.target.closest('.list__el');
-
   complTask.push(el.innerText.trim());
-
   setTimeout(() => {
     el.className += ' checked';
     setTimeout(() => {

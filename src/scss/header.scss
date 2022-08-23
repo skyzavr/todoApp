@@ -1,12 +1,14 @@
 @import 'colours.scss';
 * {
   font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+}
+body {
+  background-color: $bgrCol;
 }
 .header {
-  margin: auto 20px;
-  // font-size: 30px;
-  height: 80px;
-
+  padding: 20px;
+  box-shadow: -6px 22px 48px -9px rgba(0, 0, 0, 0.17);
   .header__wrapepr {
     display: flex;
     flex-direction: row;
@@ -49,10 +51,10 @@
       }
       .themeSwitch {
         .btnSwitch {
-          background-color: $lBtnBgrAct;
-          color: $lLiText;
+          background-color: #e0e0e6;
+          color: $lBtnTextAct;
           border-radius: 15px;
-          font-size: 24px;
+          font-size: 20px;
           height: 40px;
           width: 100px;
           text-align: center;
@@ -65,11 +67,4 @@
       }
     }
   }
-}
-
-.line {
-  height: 3px;
-  background: $lBtnBgrAct;
-  z-index: 1000000000000000000;
-  width: 100%;
 }

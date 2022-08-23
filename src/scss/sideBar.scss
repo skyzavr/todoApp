@@ -15,7 +15,7 @@
         margin-top: 20px;
         padding-left: 40px;
         a {
-          color: $lTextPas;
+          color: #b8bdc7;
           text-decoration: none;
         }
         transition: transform 0.45s ease-in-out;
@@ -29,10 +29,5 @@
         }
       }
     }
-  }
-  .vertLine {
-    height: 300px;
-    width: 3px;
-    background: $lBtnBgrAct;
   }
 }

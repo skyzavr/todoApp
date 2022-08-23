@@ -15,3 +15,9 @@
 .bin {
   filter: invert(0);
 }
+.inpDisplay {
+  display: none;
+}
+::placeholder {
+  color: #909090;
+}
