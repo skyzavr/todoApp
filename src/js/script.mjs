@@ -19,11 +19,6 @@ function addValueToList(item) {
   data.inpBtn.addEventListener('click', function () {
     pushArr(item);
   });
-  document.addEventListener('keydown', function (e) {
-    if (e.key == 'Enter') {
-      pushArr(item);
-    }
-  });
 }
 function switchTasks() {
   const swithcListLi = document.querySelectorAll('.ul_li');
@@ -89,10 +84,36 @@ async function statusChanging(el, task, complTask) {
     }
   });
 }
+function updateEditableList(prevText, task, index) {
+  const value = document.querySelector('.input').value;
+  prevText.innerHTML = ` <span class='el'>${value}</span>`;
+  //if we click on the first item, it's means it's the last one in the array
+  const length = task.length - 1;
+  const ind = length - index;
+  task.splice(ind, 1, value);
+}
+function updateEditableField(task, completeTask) {
+  document.addEventListener('click', (e) => {
+    const prevText = e.target;
+    if (prevText.classList.contains('el')) {
+      let li = prevText.closest('li'); // get reference by using closest
+      let nodes = Array.from(li.closest('ul').children); // get array
+      let index = nodes.indexOf(li);
+      prevText.innerHTML = `<input type='text' autofocus value='${prevText.innerHTML}' class='input'>`;
+      prevText.addEventListener('keydown', (e) => {
+        if (e.key == 'Enter') {
+          updateEditableList(prevText, task, index);
+          updateLS(task, completeTask);
+        }
+      });
+    }
+  });
+}
 function init() {
   data.initTasks();
   greeting(data.state.hours.hour, data.state.hours.name);
   list.renderToDoList(data.state.tasks, data.todoUl, data.state.dataType);
+  updateEditableField(data.state.tasks, data.state.completeTasks);
   clearInpField(data.state.exmList);
   themeSwithc();
   addValueToList(data.state.exmList);

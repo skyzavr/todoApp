@@ -451,3 +451,8 @@ body.dark .side__wrapper .sideBar .sideBar__list .ul_li.active a {
 ::placeholder {
   color: #909090;
 }
+
+.input {
+  outline: none;
+  border: 0;
+}

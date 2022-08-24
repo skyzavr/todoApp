@@ -1,12 +1,10 @@
 export function renderToDoList(listOfTasks, Ul, dataType, theme = '') {
-  //TODO choosing a category (work, personal, gross)
   listOfTasks.forEach((el) => {
-    const activeType = `<li class='list__el'><div><input type="checkbox" class="list__checkbox">${el} </div><span class='list__bin'><img src="src/img/bin_Theme.svg" class="bin ${theme}" alt="bin"><span/>
+    const activeType = `<li class='list__el'><div class='li_text'><input type="checkbox" class="list__checkbox"><span class='el'>${el}</span> </div><span class='list__bin'><img src="src/img/bin_Theme.svg" class="bin ${theme}" alt="bin"><span/>
     </li>`;
     const complType = `<li class='list__el checked'><div>${el}</div> <span class='list__bin'><img src="src/img/bin_Theme.svg" class="bin ${theme}" alt="bin"><span/>
     </li>`;
     const li = dataType === 'active' ? activeType : complType;
-
     Ul.insertAdjacentHTML('afterbegin', li);
   });
 }
@@ -27,6 +25,7 @@ export function addValue(el, task, dataType) {
   const inputText = document.querySelector('.input__form');
   const inputValue = inputText.value;
   if (inputText.value.trim() === '') {
+    // ! uncomment
     showError();
     inputText.value = '';
     return;
