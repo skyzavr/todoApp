@@ -37,6 +37,8 @@
     }
 
     .todo__list {
+      min-width: 300px;
+      max-width: 600px;
       //ul list
       .todo__ul {
         padding-left: 0;
@@ -65,16 +67,6 @@
           .list__checkbox:checked {
             background-color: $lLiText;
           }
-          //! datatype
-          // .work {
-          //   border: 2px solid $workColour;
-          // }
-          // .personal {
-          //   border: 2px solid $PersonalColour;
-          // }
-          // .gross {
-          //   border: 2px solid $GrossColour;
-          // }
           //bin
           .list__bin img {
             width: 14px;

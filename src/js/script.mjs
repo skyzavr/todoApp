@@ -1,8 +1,18 @@
 import * as data from './data.mjs';
 import greeting from './greetings.mjs';
 import * as list from './todo.mjs';
+///////////////
+//updating our LS data
+function updateLS(tasks, completeTask) {
+  const LSDataObj = JSON.stringify({
+    LStasks: tasks,
+    LSCompTasks: completeTask,
+  });
+  localStorage.setItem('LSData', LSDataObj);
+}
 function pushArr(item) {
   list.addValue(data.todoUl, data.state.tasks, data.state.dataType);
+  updateLS(data.state.tasks, data.state.completeTasks);
   clearInpField(item);
 }
 function addValueToList(item) {
@@ -63,19 +73,30 @@ function rndList(items) {
 function clearInpField(item) {
   const inp = document.querySelector('.input__form');
   inp.placeholder = `Start typing something, like ${rndList(item)}`;
-  inp.addEventListener('click', function () {
-    inp.value = '';
+}
+async function statusChanging(el, task, complTask) {
+  el.addEventListener('click', function (e) {
+    if (e.target.className.includes('bin')) {
+      e.target.closest('.list__el').classList.contains('checked')
+        ? list.removeElement(e, complTask)
+        : list.removeElement(e, task);
+      updateLS(task, complTask);
+    }
+    if (e.target.className.includes('list__checkbox')) {
+      list
+        .completeTask(e, task, complTask)
+        .then(() => updateLS(task, complTask));
+    }
   });
 }
 function init() {
-  clearInpField(data.state.exmList);
-  rndList(data.state.exmList);
-  themeSwithc();
-  greeting(data.state.hours.hour, data.state.hours.name);
   data.initTasks();
+  greeting(data.state.hours.hour, data.state.hours.name);
   list.renderToDoList(data.state.tasks, data.todoUl, data.state.dataType);
+  clearInpField(data.state.exmList);
+  themeSwithc();
   addValueToList(data.state.exmList);
-  list.statusChanging(data.todoUl, data.state.tasks, data.state.completeTasks);
+  statusChanging(data.todoUl, data.state.tasks, data.state.completeTasks);
   switchTasks();
 }
 init();
