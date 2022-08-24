@@ -19,8 +19,24 @@ export const state = {
   ],
   dataType: 'active',
 };
+export function UpdateTasksLS() {
+  state.tasks = [...JSON.parse(localStorage.getItem('LSData'))['LStasks']];
+  state.completeTasks = [
+    ...JSON.parse(localStorage.getItem('LSData'))['LSCompTasks'],
+  ];
+}
 export function initTasks() {
-  //TODO if we have something in local storage, we'll put it in an array
-  state.tasks = ['have fun', 'be rich', 'be happy at least'];
-  //TODO the same with complete tasks
+  const myStorage = window.localStorage;
+  if (!myStorage['LSData']) {
+    state.tasks = ['have fun', 'be rich', 'be happy at least'];
+    state.completeTasks = [];
+    const LSDataObj = JSON.stringify({
+      LStasks: state.tasks,
+      LSCompTasks: state.completeTasks,
+    });
+    localStorage.setItem('LSData', LSDataObj);
+    return [...state.tasks, state.completeTasks];
+  }
+  UpdateTasksLS();
+  return [...state.tasks, state.completeTasks];
 }
